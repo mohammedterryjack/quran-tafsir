@@ -6,7 +6,7 @@ from unicodedata import normalize, combining
 
 def remove_diacritics(arabic_text:str) -> str:
     normalized_text = normalize('NFKD', arabic_text)
-    return ''.join([c for c in normalized_text if not combining(c)]).replace("أ", "ا").replace('ٱ',"ا").replace("ـ", "").replace("ا",'').replace('و','').strip()
+    return ''.join([c for c in normalized_text if not combining(c)]).replace("أ", "ا").replace('ٱ',"ا").replace("ـ", "").replace("ا",'').replace('ى','').replace('و','').strip()
 
 def belongs_to_this_verse(quotes:List[str],verse:str) -> bool:
     if len(quotes) <= 3:
