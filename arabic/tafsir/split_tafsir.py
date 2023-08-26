@@ -1,11 +1,3 @@
-#TODO:
-#separate verses for them again (and ensure no info lost this time)
-# - find those with identical text 
-# - and split at \n . , 
-# - then search for references to verses
-# - and match sentences with verses to correct verse number
-#upload to github (and delete translation for b Arabi)
-
 from json import load, dumps
 from re import findall
 from typing import Generator, List 
