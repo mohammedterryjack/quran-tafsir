@@ -1,5 +1,5 @@
 from nltk.corpus import wordnet, brown
-from nltk import FreqDist, download
+from nltk import FreqDist
 from unicodedata import normalize, combining
 from json import dumps
 
@@ -35,5 +35,5 @@ for word in wordnet.words():
                 results[lemma].add(arabic_word)
     
     
-with open('english_arabic_dictionary.json','w') as f:
-    f.write(dumps(results,indent=2,ensure_ascii=False,default=list))
+with open('dictionary.json','w') as f:
+    f.write(dumps(results,indent=2,ensure_ascii=False,default='، '.join))
